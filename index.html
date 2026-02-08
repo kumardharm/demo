@@ -2,12 +2,27 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Tabler React Mega Navbar</title>
-    <script type="module" crossorigin src="/demo/assets/index-D0Jz217w.js"></script>
-    <link rel="stylesheet" crossorigin href="/demo/assets/index-B-ID3mWA.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>EkSkool</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <script>
+      (function () {
+        var root = document.documentElement;
+        var keys = ["theme", "theme-base", "theme-font", "theme-primary", "theme-radius"];
+        for (var i = 0; i < keys.length; i++) {
+          var key = keys[i];
+          var value = window.localStorage.getItem("tabler-" + key);
+          if (value) {
+            root.setAttribute("data-bs-" + key, value);
+          }
+        }
+      })();
+    </script>
+    <script type="module" crossorigin src="/assets/index-BszylItO.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-Dy9kuaUr.css">
   </head>
-  <body>
+  <body class="layout-fluid">
     <div id="root"></div>
   </body>
 </html>
