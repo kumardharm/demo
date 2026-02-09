@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>EkSkool</title>
+    <script>
+      (function () {
+        var path = window.location.pathname.replace(/^\/demo/, "");
+        var search = window.location.search || "";
+        var hash = window.location.hash || "";
+        var target = "/demo/?p=" + encodeURIComponent(path + search + hash);
+        window.location.replace(target);
+      })();
+    </script>
+  </head>
+  <body></body>
+</html>
