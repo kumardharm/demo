@@ -4,8 +4,11 @@
     <meta charset="utf-8" />
     <script>
       (function () {
-        var path = location.pathname.replace("/demo", "");
-        location.replace("/demo/#" + path + location.search + location.hash);
+        var path = window.location.pathname.replace(/^\/demo/, "");
+        var search = window.location.search || "";
+        var hash = window.location.hash || "";
+        var target = "/demo/?p=" + encodeURIComponent(path + search + hash);
+        window.location.replace(target);
       })();
     </script>
   </head>
