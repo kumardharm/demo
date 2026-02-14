@@ -7,6 +7,18 @@
     <title>EkSkool</title>
     <link rel="icon" type="image/x-icon" href="/demo/favicon.ico" />
     <script>
+      // SPA redirect for GitHub Pages (clean URLs, no hash)
+      // From https://github.com/rafgraph/spa-github-pages
+      (function () {
+        var l = window.location;
+        var repo = "/demo";
+        if (l.search.startsWith("?/")) {
+          var path = l.search.slice(2).replace(/&/g, "?");
+          l.replace(repo + path + l.hash);
+        }
+      })();
+    </script>
+    <script>
       (function () {
         var root = document.documentElement;
         var keys = ["theme", "theme-base", "theme-font", "theme-primary", "theme-radius"];
