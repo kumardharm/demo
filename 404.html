@@ -3,18 +3,9 @@
   <head>
     <meta charset="utf-8" />
     <script>
-      // SPA redirect for GitHub Pages (clean URLs, no hash)
-      // From https://github.com/rafgraph/spa-github-pages
       (function () {
-        var l = window.location;
-        var repo = "/demo";
-        l.replace(
-          repo +
-            "/?/" +
-            l.pathname.replace(repo, "") +
-            l.search +
-            l.hash
-        );
+        var path = location.pathname.replace("/demo", "");
+        location.replace("/demo/#" + path + location.search + location.hash);
       })();
     </script>
   </head>
